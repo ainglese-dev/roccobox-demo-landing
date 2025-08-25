@@ -1,11 +1,15 @@
 ---
-// Component imports will go here
+// Import global styles
+import '../styles/global.css';
+
+// Base path for assets
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <html lang="es">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/brand_icon.jpg" />
+		<link rel="icon" type="image/svg+xml" href={`${baseUrl}/brand_icon.jpg`} />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
 		
@@ -17,12 +21,11 @@
 		<!-- Open Graph Tags -->
 		<meta property="og:title" content="Rocco Box Crossfit - CrossFit y Boxing en Bogotá" />
 		<meta property="og:description" content="CrossFit, boxing, clases grupales y entrenamiento personal en Bogotá. Únete a nuestra comunidad de fuerza y transformación." />
-		<meta property="og:image" content="/brand_icon.jpg" />
+		<meta property="og:image" content={`${baseUrl}/brand_icon.jpg`} />
 		<meta property="og:type" content="website" />
 		<meta property="og:locale" content="es_CO" />
 		
 		<!-- Import Global Styles -->
-		<link rel="stylesheet" href="/src/styles/global.css" />
 		
 		<!-- Performance optimizations -->
 		<link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Oswald:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -38,7 +41,7 @@
 				</div>
 				<div class="banner-actions">
 					<a href="https://wa.me/573008720557?text=¡Hola! Me interesa conocer más sobre la nueva zona de Boxing" class="banner-whatsapp">
-						<img src="/whatsapp-logo.png" alt="WhatsApp" width="16" height="16">
+						<img src={`${baseUrl}/whatsapp-logo.png`} alt="WhatsApp" width="16" height="16">
 						WhatsApp
 					</a>
 					<button id="close-banner" class="banner-close" title="Cerrar">×</button>
@@ -119,7 +122,7 @@
 							</div>
 							<p class="team-experience">8 años entrenando atletas</p>
 							<a href="https://www.instagram.com/rocco_crossfit_coach/" target="_blank" class="team-social">
-								<img src="/instagram-icon.png" alt="Instagram" class="social-icon">
+								<img src={`${baseUrl}/instagram-icon.png`} alt="Instagram" class="social-icon">
 								@rocco_crossfit_coach
 							</a>
 						</div>
@@ -138,7 +141,7 @@
 							</div>
 							<p class="team-experience">6 años en artes marciales</p>
 							<a href="https://www.instagram.com/maria_boxing_coach/" target="_blank" class="team-social">
-								<img src="/instagram-icon.png" alt="Instagram" class="social-icon">
+								<img src={`${baseUrl}/instagram-icon.png`} alt="Instagram" class="social-icon">
 								@maria_boxing_coach
 							</a>
 						</div>
@@ -157,7 +160,7 @@
 							</div>
 							<p class="team-experience">5 años en entrenamiento de fuerza</p>
 							<a href="https://www.instagram.com/andres_strength_coach/" target="_blank" class="team-social">
-								<img src="/instagram-icon.png" alt="Instagram" class="social-icon">
+								<img src={`${baseUrl}/instagram-icon.png`} alt="Instagram" class="social-icon">
 								@andres_strength_coach
 							</a>
 						</div>
@@ -176,7 +179,7 @@
 							</div>
 							<p class="team-experience">4 años en fitness grupal</p>
 							<a href="https://www.instagram.com/sofia_fitness_coach/" target="_blank" class="team-social">
-								<img src="/instagram-icon.png" alt="Instagram" class="social-icon">
+								<img src={`${baseUrl}/instagram-icon.png`} alt="Instagram" class="social-icon">
 								@sofia_fitness_coach
 							</a>
 						</div>
@@ -195,7 +198,7 @@
 							</div>
 							<p class="team-experience">7 años en entrenamiento personalizado</p>
 							<a href="https://www.instagram.com/julian_personal_trainer/" target="_blank" class="team-social">
-								<img src="/instagram-icon.png" alt="Instagram" class="social-icon">
+								<img src={`${baseUrl}/instagram-icon.png`} alt="Instagram" class="social-icon">
 								@julian_personal_trainer
 							</a>
 						</div>
@@ -220,7 +223,7 @@
 							<h4>Becoming Notorious</h4>
 							<p class="partner-category">Fitness Apparel & Lifestyle</p>
 							<a href="https://www.instagram.com/becomingnotorious/" target="_blank" class="partner-social">
-								<img src="/instagram-icon.png" alt="Instagram" class="social-icon">
+								<img src={`${baseUrl}/instagram-icon.png`} alt="Instagram" class="social-icon">
 								@becomingnotorious
 							</a>
 						</div>
@@ -235,7 +238,7 @@
 							<h4>Lycan Fitness</h4>
 							<p class="partner-category">Training Equipment & Gear</p>
 							<a href="https://www.instagram.com/lycanfitness/" target="_blank" class="partner-social">
-								<img src="/instagram-icon.png" alt="Instagram" class="social-icon">
+								<img src={`${baseUrl}/instagram-icon.png`} alt="Instagram" class="social-icon">
 								@lycanfitness
 							</a>
 						</div>
@@ -250,7 +253,7 @@
 							<h4>Tributo</h4>
 							<p class="partner-category">Sports Nutrition & Supplements</p>
 							<a href="https://www.instagram.com/tributo/" target="_blank" class="partner-social">
-								<img src="/instagram-icon.png" alt="Instagram" class="social-icon">
+								<img src={`${baseUrl}/instagram-icon.png`} alt="Instagram" class="social-icon">
 								@tributo
 							</a>
 						</div>
@@ -265,7 +268,7 @@
 							<h4>FisioMax Bogotá</h4>
 							<p class="partner-category">Sports Physiotherapy & Recovery</p>
 							<a href="https://www.instagram.com/fisiomax_bogota/" target="_blank" class="partner-social">
-								<img src="/instagram-icon.png" alt="Instagram" class="social-icon">
+								<img src={`${baseUrl}/instagram-icon.png`} alt="Instagram" class="social-icon">
 								@fisiomax_bogota
 							</a>
 						</div>
@@ -280,7 +283,7 @@
 							<h4>NutriSport Colombia</h4>
 							<p class="partner-category">Professional Nutrition Consulting</p>
 							<a href="https://www.instagram.com/nutrisport_colombia/" target="_blank" class="partner-social">
-								<img src="/instagram-icon.png" alt="Instagram" class="social-icon">
+								<img src={`${baseUrl}/instagram-icon.png`} alt="Instagram" class="social-icon">
 								@nutrisport_colombia
 							</a>
 						</div>
@@ -295,7 +298,7 @@
 							<h4>Atlética Suplementos</h4>
 							<p class="partner-category">Premium Sports Supplements</p>
 							<a href="https://www.instagram.com/atletica_suplementos/" target="_blank" class="partner-social">
-								<img src="/instagram-icon.png" alt="Instagram" class="social-icon">
+								<img src={`${baseUrl}/instagram-icon.png`} alt="Instagram" class="social-icon">
 								@atletica_suplementos
 							</a>
 						</div>
@@ -313,15 +316,15 @@
 				<div class="contact-content">
 					<div class="contact-info">
 						<p class="contact-item">
-							<img src="/whatsapp-logo.png" alt="WhatsApp" class="contact-icon">
+							<img src={`${baseUrl}/whatsapp-logo.png`} alt="WhatsApp" class="contact-icon">
 							<strong>WhatsApp:</strong> <a href="https://wa.me/573008720557" class="text-red">+57 300 8720557</a>
 						</p>
 						<p class="contact-item">
-							<img src="/location-icon.png" alt="Ubicación" class="contact-icon">
+							<img src={`${baseUrl}/location-icon.png`} alt="Ubicación" class="contact-icon">
 							<strong>Ubicación:</strong> Calle 142 #9-42, Bogotá, Colombia
 						</p>
 						<p class="contact-item">
-							<img src="/instagram-icon.png" alt="Instagram" class="contact-icon">
+							<img src={`${baseUrl}/instagram-icon.png`} alt="Instagram" class="contact-icon">
 							<strong>Instagram:</strong> <a href="https://www.instagram.com/rocco_box_bogota/" target="_blank" class="text-red">@rocco_box_bogota</a>
 						</p>
 					</div>
@@ -359,18 +362,18 @@
 					<div class="footer-section">
 						<h4>Contacto</h4>
 						<p class="footer-item">
-							<img src="/whatsapp-logo.png" alt="WhatsApp" class="footer-icon">
+							<img src={`${baseUrl}/whatsapp-logo.png`} alt="WhatsApp" class="footer-icon">
 							+57 300 8720557
 						</p>
 						<p class="footer-item">
-							<img src="/location-icon.png" alt="Ubicación" class="footer-icon">
+							<img src={`${baseUrl}/location-icon.png`} alt="Ubicación" class="footer-icon">
 							Calle 142 #9-42, Bogotá
 						</p>
 					</div>
 					<div class="footer-section">
 						<h4>Síguenos</h4>
 						<a href="https://www.instagram.com/rocco_box_bogota/" target="_blank" class="footer-link">
-							<img src="/instagram-icon.png" alt="Instagram" class="footer-icon">
+							<img src={`${baseUrl}/instagram-icon.png`} alt="Instagram" class="footer-icon">
 							@rocco_box_bogota
 						</a>
 					</div>
@@ -383,7 +386,7 @@
 
 		<!-- Sticky WhatsApp Button -->
 		<a href="https://wa.me/573008720557?text=¡Hola! Me interesa conocer más sobre Rocco Box CrossFit" class="whatsapp-sticky" title="Contáctanos por WhatsApp">
-			<img src="/whatsapp-logo.png" alt="WhatsApp" width="30" height="30" />
+			<img src={`${baseUrl}/whatsapp-logo.png`} alt="WhatsApp" width="30" height="30" />
 		</a>
 
 		<!-- Theme Toggle Button -->
