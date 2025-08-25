@@ -99,9 +99,9 @@ body {
   left: 0;
   right: 0;
   z-index: 1001;
-  background-color: var(--color-red);
+  background: linear-gradient(135deg, var(--color-red) 0%, #b91c1c 50%, #991b1b 100%);
   color: white;
-  padding: var(--spacing-sm) 0;
+  padding: calc(var(--spacing-sm) * 0.5) 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   transform: translateY(-100%);
   transition: transform 0.3s ease;
@@ -192,7 +192,7 @@ body {
 
 /* Adjust body padding when banner is visible */
 body.banner-visible {
-  padding-top: 60px;
+  padding-top: 40px;
 }
 
 /* Typography */
@@ -930,6 +930,6 @@ p {
   }
   
   body.banner-visible {
-    padding-top: 80px;
+    padding-top: 50px;
   }
 }
