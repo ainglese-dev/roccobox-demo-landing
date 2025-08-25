@@ -1,16 +1,426 @@
 ---
-
+// Component imports will go here
 ---
 
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/brand_icon.jpg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		
+		<!-- SEO Meta Tags -->
+		<title>Rocco Box Crossfit - CrossFit, Boxing y Entrenamiento Funcional en Bogotá</title>
+		<meta name="description" content="Rocco Box Crossfit en Bogotá. CrossFit, boxing, clases grupales y entrenamiento personal. Únete a nuestra comunidad de fuerza y transformación. ¡Contáctanos por WhatsApp!" />
+		<meta name="keywords" content="CrossFit Bogotá, Box Bogotá, gym Bogotá, boxing, entrenamiento funcional, crossfit, gimnasio" />
+		
+		<!-- Open Graph Tags -->
+		<meta property="og:title" content="Rocco Box Crossfit - CrossFit y Boxing en Bogotá" />
+		<meta property="og:description" content="CrossFit, boxing, clases grupales y entrenamiento personal en Bogotá. Únete a nuestra comunidad de fuerza y transformación." />
+		<meta property="og:image" content="/brand_icon.jpg" />
+		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="es_CO" />
+		
+		<!-- Import Global Styles -->
+		<link rel="stylesheet" href="/src/styles/global.css" />
+		
+		<!-- Performance optimizations -->
+		<link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Oswald:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+		<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Oswald:wght@400;500;600;700&display=swap"></noscript>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<!-- Hero Section -->
+		<section id="hero" class="hero">
+			<div class="container">
+				<div class="hero-content">
+					<h1>ROCCO BOX <span class="text-red">CROSSFIT</span></h1>
+					<p class="hero-tagline">Transforma tu cuerpo, fortalece tu mente, únete a nuestra comunidad</p>
+					<div class="hero-cta">
+						<a href="https://wa.me/573008720557?text=¡Hola! Me interesa conocer más sobre Rocco Box CrossFit" class="btn btn-primary">
+							¡Únete Ahora por WhatsApp!
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- About Section -->
+		<section id="about" class="section">
+			<div class="container">
+				<div class="text-center">
+					<h2>Nuestra <span class="text-red">Filosofía</span></h2>
+					<p class="about-text">
+						En Rocco Box CrossFit creemos en la fuerza de la comunidad, el poder de la transformación personal 
+						y la importancia de superar tus límites cada día. Más que un gimnasio, somos una familia que 
+						se apoya mutuamente para alcanzar objetivos extraordinarios.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Services Section -->
+		<section id="services" class="section bg-gray-light">
+			<div class="container">
+				<h2 class="text-center">Nuestros <span class="text-red">Servicios</span></h2>
+				<div class="services-grid">
+					<div class="service-card">
+						<h3>CrossFit</h3>
+						<p>Entrenamientos funcionales de alta intensidad que combinan fuerza, cardio y agilidad.</p>
+					</div>
+					<div class="service-card">
+						<h3>Boxing</h3>
+						<p>Aprende técnicas de boxeo mientras quemas calorías y mejoras tu condición física.</p>
+					</div>
+					<div class="service-card">
+						<h3>Clases Grupales</h3>
+						<p>Entrenamientos motivadores en grupo con instructores certificados y ambiente familiar.</p>
+					</div>
+					<div class="service-card">
+						<h3>Entrenamiento Personal</h3>
+						<p>Sesiones personalizadas adaptadas a tus objetivos específicos y nivel de condición física.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Team Section -->
+		<section id="team" class="section">
+			<div class="container">
+				<h2 class="text-center">Nuestro <span class="text-red">Equipo</span></h2>
+				<p class="text-center team-intro">Conoce a los profesionales que te guiarán hacia tu mejor versión</p>
+				
+				<div class="team-grid">
+					<!-- Carlos "Rocco" Mendoza -->
+					<div class="team-card">
+						<div class="team-photo"></div>
+						<div class="team-info">
+							<h3>Carlos "Rocco" Mendoza</h3>
+							<p class="team-title">Head Coach & Fundador</p>
+							<div class="team-specializations">
+								<span class="specialization">CrossFit L2 Trainer</span>
+								<span class="specialization">Olympic Weightlifting</span>
+							</div>
+							<p class="team-experience">8 años entrenando atletas</p>
+							<a href="https://www.instagram.com/rocco_crossfit_coach/" target="_blank" class="team-social">
+								<img src="/instagram-icon.png" alt="Instagram" class="social-icon">
+								@rocco_crossfit_coach
+							</a>
+						</div>
+					</div>
+
+					<!-- María Elena Vásquez -->
+					<div class="team-card">
+						<div class="team-photo"></div>
+						<div class="team-info">
+							<h3>María Elena Vásquez</h3>
+							<p class="team-title">Boxing Coach</p>
+							<div class="team-specializations">
+								<span class="specialization">Boxing</span>
+								<span class="specialization">Functional Training</span>
+								<span class="specialization">Women's Fitness</span>
+							</div>
+							<p class="team-experience">6 años en artes marciales</p>
+							<a href="https://www.instagram.com/maria_boxing_coach/" target="_blank" class="team-social">
+								<img src="/instagram-icon.png" alt="Instagram" class="social-icon">
+								@maria_boxing_coach
+							</a>
+						</div>
+					</div>
+
+					<!-- Andrés Felipe Torres -->
+					<div class="team-card">
+						<div class="team-photo"></div>
+						<div class="team-info">
+							<h3>Andrés Felipe Torres</h3>
+							<p class="team-title">Strength & Conditioning</p>
+							<div class="team-specializations">
+								<span class="specialization">Powerlifting</span>
+								<span class="specialization">Strength Training</span>
+								<span class="specialization">Nutrition</span>
+							</div>
+							<p class="team-experience">5 años en entrenamiento de fuerza</p>
+							<a href="https://www.instagram.com/andres_strength_coach/" target="_blank" class="team-social">
+								<img src="/instagram-icon.png" alt="Instagram" class="social-icon">
+								@andres_strength_coach
+							</a>
+						</div>
+					</div>
+
+					<!-- Sofía Ramírez -->
+					<div class="team-card">
+						<div class="team-photo"></div>
+						<div class="team-info">
+							<h3>Sofía Ramírez</h3>
+							<p class="team-title">Group Classes Instructor</p>
+							<div class="team-specializations">
+								<span class="specialization">HIIT</span>
+								<span class="specialization">Functional Movement</span>
+								<span class="specialization">Mobility</span>
+							</div>
+							<p class="team-experience">4 años en fitness grupal</p>
+							<a href="https://www.instagram.com/sofia_fitness_coach/" target="_blank" class="team-social">
+								<img src="/instagram-icon.png" alt="Instagram" class="social-icon">
+								@sofia_fitness_coach
+							</a>
+						</div>
+					</div>
+
+					<!-- Julián Morales -->
+					<div class="team-card">
+						<div class="team-photo"></div>
+						<div class="team-info">
+							<h3>Julián Morales</h3>
+							<p class="team-title">Personal Training Specialist</p>
+							<div class="team-specializations">
+								<span class="specialization">Injury Rehabilitation</span>
+								<span class="specialization">Personal Training</span>
+								<span class="specialization">CrossFit</span>
+							</div>
+							<p class="team-experience">7 años en entrenamiento personalizado</p>
+							<a href="https://www.instagram.com/julian_personal_trainer/" target="_blank" class="team-social">
+								<img src="/instagram-icon.png" alt="Instagram" class="social-icon">
+								@julian_personal_trainer
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Partners Section -->
+		<section id="partners" class="section bg-gray-light">
+			<div class="container">
+				<h2 class="text-center">Nuestros <span class="text-red">Aliados</span></h2>
+				<p class="text-center partners-intro">Trabajamos con las mejores marcas y profesionales del sector fitness</p>
+				
+				<div class="partners-grid">
+					<!-- Becoming Notorious -->
+					<div class="partner-card">
+						<div class="partner-logo">
+							<span class="logo-text">BN</span>
+						</div>
+						<div class="partner-info">
+							<h4>Becoming Notorious</h4>
+							<p class="partner-category">Fitness Apparel & Lifestyle</p>
+							<a href="https://www.instagram.com/becomingnotorious/" target="_blank" class="partner-social">
+								<img src="/instagram-icon.png" alt="Instagram" class="social-icon">
+								@becomingnotorious
+							</a>
+						</div>
+					</div>
+
+					<!-- Lycan Fitness -->
+					<div class="partner-card">
+						<div class="partner-logo">
+							<span class="logo-text">LF</span>
+						</div>
+						<div class="partner-info">
+							<h4>Lycan Fitness</h4>
+							<p class="partner-category">Training Equipment & Gear</p>
+							<a href="https://www.instagram.com/lycanfitness/" target="_blank" class="partner-social">
+								<img src="/instagram-icon.png" alt="Instagram" class="social-icon">
+								@lycanfitness
+							</a>
+						</div>
+					</div>
+
+					<!-- Tributo -->
+					<div class="partner-card">
+						<div class="partner-logo">
+							<span class="logo-text">TR</span>
+						</div>
+						<div class="partner-info">
+							<h4>Tributo</h4>
+							<p class="partner-category">Sports Nutrition & Supplements</p>
+							<a href="https://www.instagram.com/tributo/" target="_blank" class="partner-social">
+								<img src="/instagram-icon.png" alt="Instagram" class="social-icon">
+								@tributo
+							</a>
+						</div>
+					</div>
+
+					<!-- FisioMax Bogotá -->
+					<div class="partner-card">
+						<div class="partner-logo">
+							<span class="logo-text">FM</span>
+						</div>
+						<div class="partner-info">
+							<h4>FisioMax Bogotá</h4>
+							<p class="partner-category">Sports Physiotherapy & Recovery</p>
+							<a href="https://www.instagram.com/fisiomax_bogota/" target="_blank" class="partner-social">
+								<img src="/instagram-icon.png" alt="Instagram" class="social-icon">
+								@fisiomax_bogota
+							</a>
+						</div>
+					</div>
+
+					<!-- NutriSport Colombia -->
+					<div class="partner-card">
+						<div class="partner-logo">
+							<span class="logo-text">NS</span>
+						</div>
+						<div class="partner-info">
+							<h4>NutriSport Colombia</h4>
+							<p class="partner-category">Professional Nutrition Consulting</p>
+							<a href="https://www.instagram.com/nutrisport_colombia/" target="_blank" class="partner-social">
+								<img src="/instagram-icon.png" alt="Instagram" class="social-icon">
+								@nutrisport_colombia
+							</a>
+						</div>
+					</div>
+
+					<!-- Atlética Suplementos -->
+					<div class="partner-card">
+						<div class="partner-logo">
+							<span class="logo-text">AS</span>
+						</div>
+						<div class="partner-info">
+							<h4>Atlética Suplementos</h4>
+							<p class="partner-category">Premium Sports Supplements</p>
+							<a href="https://www.instagram.com/atletica_suplementos/" target="_blank" class="partner-social">
+								<img src="/instagram-icon.png" alt="Instagram" class="social-icon">
+								@atletica_suplementos
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section id="contact" class="section contact-section">
+			<div class="container text-center">
+				<h2>¿Listo para <span class="text-red">Transformarte</span>?</h2>
+				<p>Contáctanos ahora y da el primer paso hacia tu mejor versión</p>
+				
+				<div class="contact-content">
+					<div class="contact-info">
+						<p class="contact-item">
+							<img src="/whatsapp-logo.png" alt="WhatsApp" class="contact-icon">
+							<strong>WhatsApp:</strong> <a href="https://wa.me/573008720557" class="text-red">+57 300 8720557</a>
+						</p>
+						<p class="contact-item">
+							<img src="/location-icon.png" alt="Ubicación" class="contact-icon">
+							<strong>Ubicación:</strong> Calle 142 #9-42, Bogotá, Colombia
+						</p>
+						<p class="contact-item">
+							<img src="/instagram-icon.png" alt="Instagram" class="contact-icon">
+							<strong>Instagram:</strong> <a href="https://www.instagram.com/rocco_box_bogota/" target="_blank" class="text-red">@rocco_box_bogota</a>
+						</p>
+					</div>
+					
+					<div class="map-container">
+						<iframe 
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.0647458654864!2d-74.04822868573224!3d4.732458643036951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f849e5c8f7c5b%3A0x8b8d8b8d8b8d8b8d!2sCalle%20142%20%239-42%2C%20Bogot%C3%A1%2C%20Colombia!5e0!3m2!1sen!2sco!4v1629818400000!5m2!1sen!2sco" 
+							width="100%" 
+							height="250" 
+							style="border:0; border-radius: 8px;" 
+							allowfullscreen="" 
+							loading="lazy" 
+							referrerpolicy="no-referrer-when-downgrade"
+							title="Ubicación Rocco Box CrossFit - Calle 142 #9-42, Bogotá">
+						</iframe>
+					</div>
+				</div>
+				
+				<div class="cta-buttons">
+					<a href="https://wa.me/573008720557?text=¡Hola! Quiero información sobre clases y horarios" class="btn btn-primary">
+						Enviar WhatsApp
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-content">
+					<div class="footer-section">
+						<h4>ROCCO BOX CROSSFIT</h4>
+						<p>Transforma tu cuerpo, fortalece tu mente</p>
+					</div>
+					<div class="footer-section">
+						<h4>Contacto</h4>
+						<p class="footer-item">
+							<img src="/whatsapp-logo.png" alt="WhatsApp" class="footer-icon">
+							+57 300 8720557
+						</p>
+						<p class="footer-item">
+							<img src="/location-icon.png" alt="Ubicación" class="footer-icon">
+							Calle 142 #9-42, Bogotá
+						</p>
+					</div>
+					<div class="footer-section">
+						<h4>Síguenos</h4>
+						<a href="https://www.instagram.com/rocco_box_bogota/" target="_blank" class="footer-link">
+							<img src="/instagram-icon.png" alt="Instagram" class="footer-icon">
+							@rocco_box_bogota
+						</a>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<p>&copy; 2024 Rocco Box CrossFit. Todos los derechos reservados.</p>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Sticky WhatsApp Button -->
+		<a href="https://wa.me/573008720557?text=¡Hola! Me interesa conocer más sobre Rocco Box CrossFit" class="whatsapp-sticky" title="Contáctanos por WhatsApp">
+			<img src="/whatsapp-logo.png" alt="WhatsApp" width="30" height="30" />
+		</a>
+
+		<!-- Theme Toggle Button -->
+		<button id="themeToggle" class="theme-toggle" title="Cambiar tema">
+			<span class="theme-icon">LIGHT</span>
+		</button>
+
+		<!-- Scroll to Top Button -->
+		<button id="scrollToTop" class="scroll-to-top" title="Volver arriba">
+			↑
+		</button>
+
+		<script>
+			// Theme toggle functionality
+			const themeToggle = document.getElementById('themeToggle');
+			const themeIcon = themeToggle.querySelector('.theme-icon');
+			
+			// Initialize theme (default dark)
+			let currentTheme = localStorage.getItem('theme') || 'dark';
+			document.documentElement.setAttribute('data-theme', currentTheme);
+			updateThemeIcon();
+			
+			function updateThemeIcon() {
+				if (currentTheme === 'dark') {
+					themeIcon.textContent = 'LIGHT'; // Switch to light mode
+				} else {
+					themeIcon.textContent = 'DARK'; // Switch to dark mode
+				}
+			}
+			
+			themeToggle.addEventListener('click', () => {
+				currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+				document.documentElement.setAttribute('data-theme', currentTheme);
+				localStorage.setItem('theme', currentTheme);
+				updateThemeIcon();
+			});
+
+			// Scroll to top functionality
+			const scrollToTopBtn = document.getElementById('scrollToTop');
+			
+			window.addEventListener('scroll', () => {
+				if (window.pageYOffset > 300) {
+					scrollToTopBtn.classList.add('show');
+				} else {
+					scrollToTopBtn.classList.remove('show');
+				}
+			});
+
+			scrollToTopBtn.addEventListener('click', () => {
+				window.scrollTo({
+					top: 0,
+					behavior: 'smooth'
+				});
+			});
+		</script>
 	</body>
 </html>
