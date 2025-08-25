@@ -29,6 +29,23 @@
 		<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Oswald:wght@400;500;600;700&display=swap"></noscript>
 	</head>
 	<body>
+		<!-- Promotional Banner -->
+		<div id="promo-banner" class="promo-banner">
+			<div class="banner-content">
+				<div class="banner-text">
+					<span class="banner-highlight">🥊 NUEVO:</span>
+					<span class="banner-message">Zona de Boxing ahora disponible - Entrena como un profesional</span>
+				</div>
+				<div class="banner-actions">
+					<a href="https://wa.me/573008720557?text=¡Hola! Me interesa conocer más sobre la nueva zona de Boxing" class="banner-whatsapp">
+						<img src="/whatsapp-logo.png" alt="WhatsApp" width="16" height="16">
+						WhatsApp
+					</a>
+					<button id="close-banner" class="banner-close" title="Cerrar">×</button>
+				</div>
+			</div>
+		</div>
+
 		<!-- Hero Section -->
 		<section id="hero" class="hero">
 			<div class="container">
@@ -380,6 +397,28 @@
 		</button>
 
 		<script>
+			// Banner functionality
+			const promoBanner = document.getElementById('promo-banner');
+			const closeBannerBtn = document.getElementById('close-banner');
+			
+			// Check if banner was previously closed
+			const bannerClosed = localStorage.getItem('boxing-banner-closed');
+			
+			if (!bannerClosed) {
+				// Show banner after a short delay
+				setTimeout(() => {
+					promoBanner.classList.add('show');
+					document.body.classList.add('banner-visible');
+				}, 1000);
+			}
+			
+			// Close banner functionality
+			closeBannerBtn.addEventListener('click', () => {
+				promoBanner.classList.remove('show');
+				document.body.classList.remove('banner-visible');
+				localStorage.setItem('boxing-banner-closed', 'true');
+			});
+
 			// Theme toggle functionality
 			const themeToggle = document.getElementById('themeToggle');
 			const themeIcon = themeToggle.querySelector('.theme-icon');

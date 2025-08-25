@@ -92,6 +92,109 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Promotional Banner */
+.promo-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1001;
+  background-color: var(--color-red);
+  color: white;
+  padding: var(--spacing-sm) 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+.promo-banner.show {
+  transform: translateY(0);
+}
+
+.banner-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--spacing-md);
+  gap: var(--spacing-md);
+}
+
+.banner-text {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  flex: 1;
+}
+
+.banner-highlight {
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.banner-message {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.banner-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.banner-whatsapp {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.banner-whatsapp:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.banner-whatsapp img {
+  /* Keep original icon colors */
+}
+
+.banner-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: var(--spacing-xs);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.banner-close:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Adjust body padding when banner is visible */
+body.banner-visible {
+  padding-top: 60px;
+}
+
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-secondary);
@@ -506,7 +609,6 @@ p {
 .contact-icon {
   width: 24px;
   height: 24px;
-  filter: brightness(0) invert(1);
   flex-shrink: 0;
 }
 
@@ -535,7 +637,7 @@ p {
 
 /* Footer */
 .footer {
-  background-color: var(--color-bg-dark);
+  background-color: var(--color-bg-secondary);
   color: var(--color-text-primary);
   padding: var(--spacing-2xl) 0 var(--spacing-lg) 0;
 }
@@ -575,7 +677,6 @@ p {
 .footer-icon {
   width: 20px;
   height: 20px;
-  filter: brightness(0) invert(1);
   flex-shrink: 0;
 }
 
@@ -612,7 +713,6 @@ p {
 }
 
 .whatsapp-sticky img {
-  filter: brightness(0) invert(1);
   transition: transform 0.3s ease;
 }
 
@@ -801,5 +901,35 @@ p {
   
   .logo-text {
     font-size: 1rem;
+  }
+  
+  /* Banner Mobile Styles */
+  .banner-content {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+  
+  .banner-text {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-xs);
+  }
+  
+  .banner-actions {
+    gap: var(--spacing-sm);
+  }
+  
+  .banner-message {
+    font-size: 0.8rem;
+  }
+  
+  .banner-whatsapp {
+    font-size: 0.8rem;
+    padding: 6px var(--spacing-sm);
+  }
+  
+  body.banner-visible {
+    padding-top: 80px;
   }
 }
